@@ -1,5 +1,0 @@
-
-site_name: EasyQuest Docs
-repo_url: https://github.com/KnightlessLabs/EasyQuest-Docs
-markdown_extensions:
-- admonition
