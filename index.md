@@ -1,1 +1,2 @@
 
+# EasyQuest Documentation
