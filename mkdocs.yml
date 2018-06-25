@@ -1,6 +1,7 @@
 site_name: EasyQuest Documentation
 site_author: Knightless Labs
 repo_url: https://github.com/KnightlessLabs/EasyQuest-Docs
+site_url: https://twitter.com/knightlesslabs
 
 markdown_extensions:
 - admonition
