@@ -12,3 +12,5 @@ Once it's open, to create a quest you just have to press the "Add Quest" button.
 Now the window should look like this.
 
 ![](../assets/EasyQuestEditor.png)
+
+For an explanation of all the options here, go to [Easy Quest Editor Reference](EasyQuestEditorReference.md)
