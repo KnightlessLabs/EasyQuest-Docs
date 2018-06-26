@@ -20,21 +20,21 @@
 * Scene - The scene this quest happens in. On 2017 and higher, this is the active scene. 
 * Short Description - A description of the objective.
 
-### Quest Objective (Go To)
+#### Quest Objective (Go To)
 * Position - The position the player has to go to.
 * Max Distance Away - How far the player can be before considered at the position.
 
-### Quest Objective (Collect/Defeat)
+#### Quest Objective (Collect/Defeat)
 * Objective Position - If this quest is scene and/or position based.
 * Item/Enemy Name - The name of the item/enemy being tracked.
 * Amount Needed - How many of the item/enemy is needed.
 
-### Quest Objective (Move Obj)
+#### Quest Objective (Move Obj)
 * Object Name - The name of the object. Used when grabbing a reference to the gameobject.
 * Position - The position it needs to be in.
 * Compensation - How fat the player can be before considered at the position.
 
-### Quest Objective (Return To/Talk To)
+#### Quest Objective (Return To/Talk To)
 * Returner/Conversation Name - The name of who you have to return to. This doesn't have to be the gameobject's name, you can learn about this in the [???]() section.
 
 ### Quest Need Finished
