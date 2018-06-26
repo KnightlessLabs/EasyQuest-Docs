@@ -13,4 +13,5 @@ Now the window should look like this.
 
 ![](../assets/EasyQuestEditor.png)
 
-For an explanation of what everything means, go to [Easy Quest Editor Reference](EasyQuestEditorReference.md)
+For an explanation of what everything means, go to [Easy Quest Editor Reference](EasyQuestEditorReference.md).
+Now that you've created quest, the next thing is [Handling the Quest](HandlingQuest.md).
