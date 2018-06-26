@@ -19,4 +19,17 @@ Note that for **Move Obj** quest, you want to pass a reference to the object by 
 The ObjectName is the one you set in the objective, so make sure those match. Overwrite is if you want to overwrite a reference
 if it already has one.
 
-For **Collect/Defeat** quest, 
+For **Collect/Defeat** quest, whenever an object is collected call the method `EasyQuestManager.Current.CheckCollectObj(ItemName);`
+or `EasyQuestManager.Current.CheckEnemyObj(EnemyName);`, with ItemName/EnemyName being the name you decided for the objective.
+
+For **Return To/Talk To** quest, call either `EasyQuestManager.Current.CheckReturnObj(QuestID, ReturnerName);` or `EasyQuestManager.Current.CheckTalkObj(ConversationName);`.      
+ReturnerName and ConversationName are the names you decided for the objective.
+
+## 3. Updating Quest Log
+`EasyQuestManager.Current.SetCurrentQuest(Index);` is useful if you want to show a quest to the player as their "Current Quest," however this can be ignored if you have your own implementation.
+
+## 4. Finishing Quest
+Quest are usually finished automatically, however if you unchecked "Auto-Complete Quest" then you can complete them manually by calling `EasyQuestManager.Current.QuestFinish(QuestID);`
+
+## 5. What's Next
+Besides this, there are some few useful event functions, which I describe in [EasyQuestManager Reference](EasyQuestManagerReference.md).
