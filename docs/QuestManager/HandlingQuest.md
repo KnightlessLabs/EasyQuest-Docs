@@ -3,8 +3,7 @@ Here I'll describe the methods you should use to properly handle quest. I won't 
 by case.
 
 ## 1. Accepting Quest
-To accept a quest, call     
-`EasyQuestManager.Current.AcceptQuest(QuestID);`    
+To accept a quest, call `EasyQuestManager.Current.AcceptQuest(QuestID);`    
 With QuestID being the ID of the quest you want to be in the player's quest list. This quest will now be tracked.
 
 ## 2. Updating Quest Objective Info
