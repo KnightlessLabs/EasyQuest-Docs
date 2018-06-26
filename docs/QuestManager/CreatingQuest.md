@@ -13,4 +13,4 @@ Now the window should look like this.
 
 ![](../assets/EasyQuestEditor.png)
 
-For an explanation of all the options here, go to [Easy Quest Editor Reference](EasyQuestEditorReference.md)
+For an explanation of what everything means, go to [Easy Quest Editor Reference](EasyQuestEditorReference.md)
