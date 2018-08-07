@@ -12,8 +12,8 @@ Create an object and make sure it's tagged "EQManager", and attach both the **Ea
 On the EasyQuestManager, if it's not already assigned, make sure to assign the "Custom GUI Skin." It's in the root of the EasyQuest folder. Now you'll want to press the "Generate Quest Data" button, and you'll be setup the same as the automatic method.
 
 ## 2. Assigning the Player
-For certain quest you'll need to know the position of the player (currently for "GoTo" quest types). If you don't need this, you can skip doing this.
-You can assign the player's gameobject to the field directly, however your game will probably be spawning the player during runtime, so this field is public if you ever want to do that like so:     
+For certain quest you'll need to know the position of the player (currently for "GoTo" quest types). If you don't need this, you can skip doing this.   
+You can assign the player's gameobject to the "Player" field on the EasyQuestManager directly, however your game will probably be spawning the player during runtime, so you can assign this field like so:         
 `EasyQuestManager.Current.Player = playerObject;`
 
 ## 3. Creating Quests
