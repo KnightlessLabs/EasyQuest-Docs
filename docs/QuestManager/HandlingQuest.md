@@ -17,7 +17,7 @@ Note that for **Move Obj** quest, you want to pass a reference to the object by 
 `EasyQuestManager.Current.SetQuestObjectReference(GameObject object, string ObjectName, bool Overwrite);`  
 
 The ObjectName is the one you set in the objective, so make sure those match. Overwrite is if you want to overwrite a reference
-if it already has one.
+if it already has one. I recommend calling this in either the object's Start(); or OnEnable(); method.
 
 For **Collect/Defeat** quest, whenever an object is collected call the method `EasyQuestManager.Current.CheckCollectObj(ItemName);`
 or `EasyQuestManager.Current.CheckEnemyObj(EnemyName);`, with ItemName/EnemyName being the name you decided for the objective.
