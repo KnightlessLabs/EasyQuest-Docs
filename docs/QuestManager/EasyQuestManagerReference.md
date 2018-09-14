@@ -27,7 +27,7 @@ For any quest that needs to track an object's position, make sure this is called
 
 
 ### `bool CheckQuestPrerequisitesCompleted ( int QuestID);`
-On the quest giver, you want to call this for all the quest they have to check if they're avaliable. The recommended usage is to call it after the **OnQuestGet** and **OnQuestFinish** events.
+On the quest giver, you want to call this for all the quest they have to check if they're avaliable. The recommended usage is to call it using the **OnQuestGet** and **OnQuestFinish** events.
 
 
 ### `bool RequestTalkObjCompletionStatus( int QQID, string CN );`
@@ -35,11 +35,11 @@ For **Talk To** quest, use this when you need to know if the player should get a
 
 
 ### `void CheckReturnObj ( int QuestID, string ReturnerName );`
-Call this when you want a return objective to be checked. The ReturnerName is what you defined in the objective itself.
+Call this when you want a return objective to be completed if it exist. The ReturnerName is what you defined in the objective itself.
 
 ### `void CheckTalkObj (string npcName);`, `void CheckCollectObj (string objName);`, 
 ### & `void CheckEnemyObj ( string enemyName );`
-Called when you want one of these objectives to be checked.
+Called when you want one of these objectives to be completed if it exist.
 
 ## 2. Events
 
