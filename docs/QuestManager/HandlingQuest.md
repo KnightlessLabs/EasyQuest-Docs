@@ -10,7 +10,7 @@ With QuestID being the ID of the quest you want to be in the player's quest list
 This part depends on which objective your quest has. 
 
 For **Go To/Move Obj** quest, this is handled by EasyQuestManager's "CheckQuestData" function. This is called during either FixedUpdate
-or manually as shown below. Note that **Go To** quest need the player variable to be set.
+or manually (explained in [EasyQuestManager Reference](EasyQuestManagerReference.md)) Note that **Go To** quest need the player variable to be set.
 ![]()
 
 Note that for **Move Obj** quest, you want to pass a reference to the object by calling       
