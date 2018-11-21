@@ -2,27 +2,37 @@
 Here I'll describe the methods you should use to properly handle quest. I won't go into implementation too much as that varies case
 by case.
 
-## 1. Accepting Quest
+## _1. Accepting Quest_
 To accept a quest, call `EasyQuestManager.Current.AcceptQuest(QuestID);`    
-With QuestID being the ID of the quest you want to be in the player's quest list. This quest will now be tracked.
+With QuestID being the ID of the quest you want to be in the player's quest list. This quest will now be tracked, and it's objectives can be updated as shown below.
 
-## 2. Updating Quest Objective Info
-This part depends on which objective your quest has. 
+## _2. Checking & Updating Quest Objective Info_
 
-For **Go To/Move Obj** quest, this is handled by EasyQuestManager's "CheckQuestData" function. This is called during either FixedUpdate
-or manually (explained in [EasyQuestManager Reference](EasyQuestManagerReference.md)) Note that **Go To** quest need the player variable to be set.
-![]()
+### General
+There's a few useful methods to help check the progression of quest and objectives.     
 
-Note that for **Move Obj** quest, you want to pass a reference to the object by calling       
-`EasyQuestManager.Current.SetQuestObjectReference(GameObject object, string ObjectName, bool Overwrite);`  
+For example, you can call `CheckQuestPrerequisitesCompleted(QuestID);` to see if the required quest(s) before the one being checked are done, which is useful, for example, for quest givers showing their quest status above their head.     
+
+There's also `CheckIfTalkObjInProgress(QuestID, ConversationName);` that returns true if a talk objective is in progress for that quest, which is useful if you want the quest giver to talk to the player before actually finishing the quest.
+
+### Go To/Move Object Objectives
+These are handled by EasyQuestManager's "CheckQuestData" function. This is called during either FixedUpdate automatically
+or manually whenever you want it to (explained in [EasyQuestManager Reference](EasyQuestManagerReference.md)) Note that **Go to** objectives need the player variable to be set as stated in the [Setup](./Setup.md) section.
+
+Also note that for **Move Obj** quest, you want to pass a reference to the object by calling    
+```   
+EasyQuestManager.Current.SetQuestObjectReference(GameObject object, string ObjectName, bool Overwrite);
+```  
 
 The ObjectName is the one you set in the objective, so make sure those match. Overwrite is if you want to overwrite a reference
 if it already has one. I recommend calling this in either the object's Start(); or OnEnable(); method.
 
-For **Collect/Defeat** quest, whenever an object is collected call the method `EasyQuestManager.Current.CheckCollectObj(ItemName);`
-or `EasyQuestManager.Current.CheckEnemyObj(EnemyName);`, with ItemName/EnemyName being the name you decided for the objective.
+### Collect/Defeat Objectives
+For **Collect/Defeat** objectives, whenever an object is collected call the method `EasyQuestManager.Current.UpdateCollectObjectives(ItemName);`
+or `EasyQuestManager.Current.UpdateEnemyObjectives(EnemyName);`, with ItemName/EnemyName being the name you decided for the objective.
 
-For **Return To/Talk To** quest, call either `EasyQuestManager.Current.CheckReturnObj(QuestID, ReturnerName);` or `EasyQuestManager.Current.CheckTalkObj(ConversationName);`.      
+### Return/Talk To Objectives
+For **Return To/Talk To** objectives, call either `EasyQuestManager.Current.UpdateReturnObjectives(QuestID, ReturnerName);` or `EasyQuestManager.Current.UpdateTalkToObjectives(ConversationName);`.      
 ReturnerName and ConversationName are the names you decided for the objective.
 
 ## 3. Updating Quest Log
